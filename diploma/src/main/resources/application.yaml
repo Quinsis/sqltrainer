@@ -1,0 +1,105 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: diploma
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: 1234
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog.yml
+
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: spring_session
+    timeout: 2592000000
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: urazov.buj@gmail.com
+    password: nqcclfcskzydhdkp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  email:
+    registration-message: "Здравствуйте, %s.\n\nСпасибо за регистрацию в нашем приложении! Для завершения процесса регистрации и активации вашей учётной записи, пожалуйста, перейдите по следующей ссылке:\n\n%s\n\nЕсли вы не регистрировались в нашем приложении, проигнорируйте это письмо.\n\nС уважением,\nУразов Илья Владимирович!"
+    password-reset-message: "Здравствуйте, %s.\n\nВы получили это письмо, потому что запросили восстановление пароля для вашей учётной записи в нашем приложении. Чтобы сбросить пароль и получить доступ к вашей учётной записи, пожалуйста, нажмите на следующую ссылку:\n\n%s\n\nЕсли вы не запрашивали сброс пароля, проигнорируйте это письмо.\n\nС уважением,\nУразов Илья Владимирович!"
+    task-complete-message: "Уважаемый %s,\n\nСтудент %s сдал задание \"%s\".\n\nПожалуйста, просмотрите подробности задания в разделе \"Результаты\" и проставить оценку."
+  html:
+    schema: "<li onclick='choose(this)' class='schema' id='%s'><i class='fa-solid fa-table-list'></i><span>%s</span><div class='schemaActions'><svg onclick='edit(this)' id='schemaEdit' stroke='currentColor' fill='none' stroke-width='2' viewBox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' class='icon-sm' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M12 20h9'></path><path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'></path></svg><svg onclick='deleteSchema(this)' id='schemaDelete' stroke='currentColor' fill='none' stroke-width='2' viewBox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' class='icon-sm' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'><polyline points='3 6 5 6 21 6'></polyline><path d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'></path><line x1='10' y1='11' x2='10' y2='17'></line><line x1='14' y1='11' x2='14' y2='17'></line></svg><i onclick='accept(this)' id='schemaAccept' class='fa-solid fa-check'></i><i onclick='deny(this)' id='schemaDeny' class='fa-solid fa-xmark'></i></div></li>"
+    schemaForConnection: "<li onclick='chooseSchema(this)' class='schema' id='%s'><i class='fa-solid fa-table-list'></i><span>%s</span></li>"
+    userTask: "<li onclick='choose(this)' class='task' id='%s'><i class='fa-solid fa-table-list'></i><span>%s</span></li>"
+    userTaskAttempt: "<li class='attempt'>
+                        <span class='attempt-status status-%s'>%s</span>
+                        <span class='attempt-query'>%s</span>
+                        <span class='attempt-date'>%s</span>
+                      </li>"
+    taskResult: "<li class='result'>
+                    <span class='result-status status-%s'>%s<span class='point'>•</span><span class='result-author'>%s</span></span>
+                    <span class='result-query'>%s</span>
+                    <span class='result-date'>%s</span>
+                 </li>"
+    userTaskDescription: "<div class='taskInfo-description'>
+                            <div class='description-group'>
+                              <span class='description-title'>%s</span>
+                              <small class='description-content'>%s</small>
+                              <ul class='tables'>%s</ul>
+                            </div>
+                          </div>"
+    userTaskInfo: "<div class='taskInfo'>
+                    <ul class='taskTabs'>
+                      <li onclick='showDescription(this)' class='taskTab showDescription active'>Описание</li>
+                      <li onclick='showAttempts(this)' class='taskTab showAttempts'>История запросов</li>
+                      <li onclick='completeTask()' class='completeTask'>Сдать задание</li>
+                    </ul>
+                    %s
+                  </div>"
+    taskInfo: "<div class='taskInfo'>
+                <ul class='taskTabs'>
+                  <li onclick='showDescription(this)' class='taskTab showDescription active'>Описание</li>
+                  <li onclick='showResults(this)' class='taskTab showResults'>Результаты</li>
+                </ul>
+                <div class='taskInfo-description'>
+                  <div class='taskInfo-text'>
+                  <div onclick='copyTaskCode(this)' class='taskInfo-item' title='Скопировать код задания'>
+                  <i class='fa-solid fa-copy copy'></i>
+                  <span class='taskInfo-label'>Код задания</span>
+                  <span class='taskInfo-code'>%s</span>
+                  </div>
+                  <div onclick='editTaskInfoItem(this)' class='taskInfo-item' title='Редактировать'>
+                  <i class='fa-regular fa-pen-to-square edit'></i>
+                  <i onclick='editAccept(event)' class='fa-solid fa-check editAccept  unclickable opacity-0'></i>
+                  <i onclick='editDeny(event)' class='fa-solid fa-xmark editDeny unclickable opacity-0'></i>
+                  <span class='taskInfo-label'>Название</span>
+                  <span class='taskInfo-name taskInfo-content'>%s</span>
+                  </div>
+                  <div onclick='editTaskInfoItem(this)' class='taskInfo-item' title='Редактировать'>
+                  <i class='fa-regular fa-pen-to-square edit unclickable'></i>
+                  <i onclick='editAccept(event)' class='fa-solid fa-check editAccept unclickable opacity-0'></i>
+                  <i onclick='editDeny(event)' class='fa-solid fa-xmark editDeny unclickable opacity-0'></i>
+                  <span class='taskInfo-label'>Описание</span>
+                  <span class='taskInfo-desc taskInfo-content'>%s</span>
+                  </div>
+                  <div onclick='editTaskInfoItem(this)' class='taskInfo-item' title='Редактировать'>
+                  <i class='fa-regular fa-pen-to-square edit'></i>
+                  <i onclick='editAccept(event)' class='fa-solid fa-check editAccept unclickable opacity-0'></i>
+                  <i onclick='editDeny(event)' class='fa-solid fa-xmark editDeny unclickable opacity-0'></i>
+                  <span class='taskInfo-label'>Запрос</span>
+                  <span oninput='invalidQuery()' class='taskInfo-query taskInfo-content'>%s</span>
+                  </div>
+                  <div class='buttons'>
+                  <span onclick='executeQuery()' id='execute-sql' class='button'>Проверить запрос</span>
+                  <span onclick='saveTask()' id='edit-task' class='button'>Подтвердить изменения</span>
+                  </div>
+                </div>
+                %s</div>"

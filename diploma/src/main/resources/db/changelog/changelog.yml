@@ -1,0 +1,52 @@
+databaseChangeLog:
+  # Добавление таблицы "Пользователь"
+  - changeSet:
+      id: test-1
+      author: quinsis
+      changes:
+        - createSequence:
+              incrementBy: 1
+              sequenceName: user_id_seq
+              startValue: 1
+        - createTable:
+            tableName: user
+            remarks: Пользователь
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: user_pk
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_active
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: activation_code
+                  type: text
+                  constraints:
+                    nullable: true
+              - column:
+                  name: reset_password_code
+                  type: text
+                  constraints:
+                    nullable: true
