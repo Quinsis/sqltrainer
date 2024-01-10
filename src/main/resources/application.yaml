@@ -1,0 +1,46 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: ${mongodb_uri}
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${postgres_url}
+    username: ${postgres_username}
+    password: ${postgres_password}
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog.yml
+
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: spring_session
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: urazov.buj@gmail.com
+    password: ${mail_password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  email:
+    registration-message: ${registration_message}
+    password-reset-message: ${reset_password_message}
+    task-complete-message: ${task_complete_message}
+  html:
+    schema: ${schema_html}
+    schemaForConnection: ${schema_for_connection_html}
+    userTask: ${user_task_html}
+    userTaskAttempt: ${user_task_attempt_html}
+    taskResult: ${task_result_html}
+    userTaskDescription: ${user_task_description_html}
+    userTaskInfo: ${user_task_info_html}
+    taskInfo: ${task_info_html}

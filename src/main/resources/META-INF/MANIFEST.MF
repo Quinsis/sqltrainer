@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Main-Class: ru.quinsis.sqltrainer.Demo6Application
+Class-Path: opencsv-5.7.1.jar spring-boot-starter-web-3.1.5.jar thymelea
+ f-spring6-3.1.2.RELEASE.jar mongodb-driver-sync-4.9.1.jar lombok-1.18.3
+ 0.jar istack-commons-runtime-4.1.2.jar spring-security-crypto-6.1.5.jar
+  jackson-core-2.15.3.jar logback-classic-1.4.11.jar spring-boot-starter
+ -aop-3.1.5.jar jakarta.transaction-api-2.0.1.jar spring-boot-starter-th
+ ymeleaf-3.1.5.jar spring-security-core-6.1.5.jar spring-core-6.0.13.jar
+  hibernate-core-6.2.13.Final.jar jackson-databind-2.15.3.jar javax.acti
+ vation-api-1.2.0.jar spring-tx-6.0.13.jar spring-aop-6.0.13.jar mongodb
+ -driver-core-4.9.1.jar slf4j-api-2.0.9.jar snakeyaml-1.33.jar angus-act
+ ivation-2.0.1.jar jackson-annotations-2.15.3.jar tomcat-embed-websocket
+ -10.1.15.jar micrometer-commons-1.11.5.jar jackson-datatype-jdk8-2.15.3
+ .jar jakarta.annotation-api-2.1.1.jar commons-lang3-3.12.0.jar spring-w
+ ebmvc-6.0.13.jar spring-boot-starter-security-3.1.5.jar jul-to-slf4j-2.
+ 0.9.jar txw2-4.0.3.jar logback-core-1.4.11.jar commons-text-1.10.0.jar 
+ spring-data-mongodb-4.1.5.jar thymeleaf-3.1.2.RELEASE.jar hibernate-com
+ mons-annotations-6.0.6.Final.jar jaxb-core-4.0.3.jar spring-boot-starte
+ r-freemarker-3.1.5.jar spring-aspects-6.0.13.jar spring-security-config
+ -6.1.5.jar junit-4.13.2.jar spring-boot-starter-logging-3.1.5.jar freem
+ arker-2.3.32.jar aspectjweaver-1.9.20.jar antlr4-runtime-4.10.1.jar spr
+ ing-security-web-6.1.5.jar spring-orm-6.0.13.jar thymeleaf-extras-sprin
+ gsecurity6-3.1.2.RELEASE.jar jakarta.persistence-api-3.1.0.jar bson-rec
+ ord-codec-4.9.1.jar micrometer-observation-1.11.5.jar spring-jcl-6.0.13
+ .jar jakarta.inject-api-2.0.1.jar hamcrest-core-2.2.jar spring-data-com
+ mons-3.1.5.jar jackson-datatype-jsr310-2.15.3.jar spring-boot-starter-d
+ ata-mongodb-3.1.5.jar HikariCP-5.0.1.jar spring-expression-6.0.13.jar j
+ andex-3.0.5.jar spring-boot-starter-data-jpa-3.1.5.jar spring-data-jpa-
+ 3.1.5.jar spring-context-support-6.0.13.jar byte-buddy-1.14.9.jar attop
+ arser-2.0.7.RELEASE.jar spring-beans-6.0.13.jar log4j-to-slf4j-2.20.0.j
+ ar log4j-api-2.20.0.jar spring-context-6.0.13.jar spring-boot-starter-m
+ ail-3.1.5.jar spring-jdbc-6.0.13.jar classmate-1.5.1.jar spring-boot-st
+ arter-json-3.1.5.jar spring-boot-starter-3.1.5.jar spring-boot-autoconf
+ igure-3.1.5.jar postgresql-42.6.0.jar jakarta.xml.bind-api-4.0.1.jar ja
+ xb-api-2.3.1.jar spring-boot-3.1.5.jar spring-boot-starter-tomcat-3.1.5
+ .jar jakarta.activation-api-2.1.2.jar spring-web-6.0.13.jar jboss-loggi
+ ng-3.5.3.Final.jar tomcat-embed-el-10.1.15.jar hamcrest-2.2.jar tomcat-
+ embed-core-10.1.15.jar jakarta.mail-1.1.0.jar unbescape-1.1.6.RELEASE.j
+ ar jackson-module-parameter-names-2.15.3.jar commons-collections4-4.4.j
+ ar checker-qual-3.31.0.jar spring-boot-starter-jdbc-3.1.5.jar liquibase
+ -core-4.20.0.jar bson-4.9.1.jar json-simple-1.1.1.jar jaxb-runtime-4.0.
+ 3.jar
+

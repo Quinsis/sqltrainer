@@ -1,0 +1,262 @@
+.modal {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #202123;
+    border-radius: 10px;
+    width: 600px;
+    z-index: 2;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ECECF1;
+    padding: 14px;
+}
+
+.modal-header .fa-xmark {
+    cursor: pointer;
+    transition: 0.2s;
+    color: #848495;
+    margin-left: auto;
+}
+
+.modal-header .fa-xmark:hover {
+    color: #ECECF1;
+}
+
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    font-size: 14px;
+    height: 45px;
+    width: max-content;
+    color: #ECECF1;
+    border-radius: 6px;
+    border: 1px solid #4D4D4F;
+    cursor: pointer;
+    gap: 10px;
+    margin: 20px 20px 20px auto;
+}
+
+.modal input {
+    width: -webkit-fill-available;
+    color: #e9e9e9;
+    border-radius: 0px;
+    height: 45px;
+    font-size: 16px;
+}
+
+.query {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #343541;
+}
+
+#close-table {
+    display: none;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #ECECF1;
+    cursor: pointer;
+    background: transparent;
+}
+
+#close-table i {
+    padding-left: 10px;
+}
+
+#close-table:hover {
+    background: #2d2e37;
+}
+
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+.input-group {
+    width: 700px;
+    min-width: auto;
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #5D5E6A;
+    border-radius: 15px;
+    padding: 16px;
+}
+
+.sql-input {
+    width: -webkit-fill-available;
+    font-size: 16px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    outline: none;
+    color: #ECECF1;
+    border-radius: 0px;
+}
+
+.sql-input::placeholder {
+    color: #8A8A9B;
+}
+
+#execute-sql {
+    width: 20px;
+    height: 20px;
+    color: #ECECF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.taskInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 20px;
+    gap: 40px;
+}
+
+.taskTabs {
+    list-style: none;
+    color: #e9e9e9;
+    display: flex;
+    padding: 0;
+}
+
+.taskTab {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.completeTask {
+    padding: 14px;
+    border-radius: 5px;
+    background: #404252;
+    color: #e9e9e9;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.complete-task:hover {
+    background: #454758;
+}
+
+.taskTab:hover {
+    background: #40414f;
+}
+
+.taskTab.active {
+    background: #4e5162;
+}
+
+.taskTab.active:hover {
+    background: #4e5162;
+}
+
+.taskInfo-description {
+    display: flex;
+    height: -webkit-fill-available;
+}
+
+.description-group {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.description-title {
+    font-size: 20px;
+}
+
+.description-content {
+    color: #8a8a9b;
+    font-size: 14px;
+}
+
+.tables {
+    margin-top: 20px;
+    padding: 0;
+}
+
+.attempts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.attempt {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    gap: 10px;
+    background: #40414f;
+    border-radius: 5px;
+}
+
+.status-accepted {
+    color: #10A37F;
+}
+
+.status-error {
+    color: rgb(251 76 76);
+}
+
+.attempt-query {
+    font-size: 14px;
+    color: #e9e9e9;
+}
+
+.attempt-date {
+    font-size: 12px;
+    color: #8A8A9B;
+}
+
+.notification {
+    width: 500px;
+    list-style: none;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px;
+    gap: 14px;
+    background: #e9e9e9;
+    color: #2b2b2b;
+    font-size: 14px;
+    transition: 0.3s ease-in;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.notification.show {
+    top: 50px;
+}
